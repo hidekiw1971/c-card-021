@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.card {
+    display: block;
+    max-width: rem(350);
+    width: 100%;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>figure {
+    position: relative;
+    overflow: hidden;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>figure::before {
+    content: "";
+    display: block;
+    padding-top: calc(433/550*100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mq(md) {
+        // 
+    }
+
+}
+
+.card>.card-contents>h2 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>.card-contents>p {
+    text-align: left;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>.card-contents>.card-inner-contents {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>.card-contents>.card-inner-contents>p {
+    background: rgba(255, 255, 0, 1);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card-contents {
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>.card-contents>h2,
+.card>.card-contents>p {
+    margin-bottom: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
