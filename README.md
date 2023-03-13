@@ -1,7 +1,7 @@
-画像をコピペ
+<img width="651" alt="image" src="https://user-images.githubusercontent.com/99580997/224831833-3f16ccca-b55d-4ae6-bef4-229b3097fc59.png">
 
 # compornent（共通部品）
-- 説明
+- カード（単体部品）
 
 # w3c html/css ck
 - confirmed
