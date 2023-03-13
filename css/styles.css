@@ -170,6 +170,9 @@ select::-ms-expand {
   max-width: 350px;
   max-width: 21.875rem;
   width: 100%;
+  background: rgb(230, 230, 250);
+  margin: 50px auto;
+  margin: 3.125rem auto;
 }
 .card > figure {
   position: relative;
@@ -198,9 +201,14 @@ select::-ms-expand {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 .card > .card-contents > .card-inner-contents > p {
   background: rgb(255, 255, 0);
+  white-space: nowrap;
+}
+.card > .card-contents > .card-inner-contents > time {
+  white-space: nowrap;
 }
 .card-contents {
   padding: 20px;
@@ -210,5 +218,30 @@ select::-ms-expand {
 .card > .card-contents > p {
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
+}
+.card > figure > span {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(255, 105, 180);
+  border-top: 1.875rem solid rgb(255, 105, 180);
+  border-right: 30px solid transparent;
+  border-right: 1.875rem solid transparent;
+  border-bottom: 30px solid transparent;
+  border-bottom: 1.875rem solid transparent;
+  border-left: 30px solid rgb(255, 105, 180);
+  border-left: 1.875rem solid rgb(255, 105, 180);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card > figure > span::before {
+  content: "new";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-80%, -80%) rotate(-45deg);
+          transform: translate(-80%, -80%) rotate(-45deg);
 }
 /*# sourceMappingURL=styles.css.map */

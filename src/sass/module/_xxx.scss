@@ -4,6 +4,8 @@
     display: block;
     max-width: rem(350);
     width: 100%;
+    background: rgba(230, 230, 250, 1);
+    margin: rem(50) auto;
 
     @include mq(md) {
         // 
@@ -53,14 +55,26 @@
 .card>.card-contents>.card-inner-contents {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     @include mq(md) {
         // 
     }
 }
 
+// カテゴリ表示
 .card>.card-contents>.card-inner-contents>p {
     background: rgba(255, 255, 0, 1);
+    white-space: nowrap;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+// 日付表示
+.card>.card-contents>.card-inner-contents>time {
+    white-space: nowrap;
 
     @include mq(md) {
         // 
@@ -83,3 +97,36 @@
         // 
     }
 }
+
+// new表示
+.card>figure>span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: rem(30) solid rgba(255, 105, 180, 1);
+    border-right: rem(30) solid transparent;
+    border-bottom: rem(30) solid transparent;
+    border-left: rem(30) solid rgba(255, 105, 180, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card>figure>span::before {
+    content: "new";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-80%, -80%) rotate(-45deg);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+// /new表示
